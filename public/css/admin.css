@@ -1,0 +1,70 @@
+.admin-cover{
+    display: flex;
+    justify-content: center;
+}
+
+.admin-header{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 4vw;
+    margin-left: 30vw;
+    flex-basis: 50%;
+    margin-top: 9vh;
+}
+
+.lasuBg{
+    margin-left: -10vw;
+   width: 45%;
+   margin-top: 30px;
+}
+
+#mot-sch-logo{
+    flex-basis: 20%;
+}
+
+.box1{
+    margin-top: 20vh; 
+    height: 30vh;
+    background-color: #00b894;
+}
+
+.box1 h3{
+    text-align: center;
+    margin-top: 10vh; 
+    color: white;
+}
+
+.box2{
+    margin-top: 20vh; 
+    height: 30vh;
+    background-color: #40739e;
+}
+
+.box2 h3{
+    text-align: center;
+    margin-top: 10vh; 
+    color: white;
+}
+
+.box3{
+    margin-top: 20vh; 
+    height: 30vh;
+    background-color: #2f3640;
+}
+
+.box3 h3{
+    text-align: center;
+    margin-top: 10vh; 
+    color: white;
+}
+
+.box4{
+    margin-top: 20vh; 
+    height: 30vh;
+    background-color: #e84118;
+}
+
+.box4 h3{
+    text-align: center;
+    margin-top: 10vh; 
+    color: white;
+}
