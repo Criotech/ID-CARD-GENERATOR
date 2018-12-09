@@ -13,6 +13,20 @@ const multer =require("multer");
 const methodOverride = require("method-override");
 
 
+function  isLoggedIn(req, res,next){
+  
+  if (req.isAuthenticated()){
+    return next()
+  }
+     res.redirect('/login')
+}
+
+
+router.get('/logout', function(req, res, next){
+  req.logout()
+  res.redirect('/login')
+})
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index');
@@ -28,19 +42,19 @@ router.get('/login', function(req, res, next) {
 });
 
 
-router.get('/admindashboard', function(req, res, next) {
+router.get('/admindashboard', isLoggedIn, function(req, res, next) {
   res.render('admindashboard');
 });
 
 
-router.get('/registerStudent', function(req, res, next) {
+router.get('/registerStudent', isLoggedIn, function(req, res, next) {
     let success = req.flash('success');
 
   res.render('registerStudent', {success});
 });
 
 
-router.get('/adminPortal', function(req, res, next) {
+router.get('/adminPortal', isLoggedIn, function(req, res, next) {
     let success = req.flash('success');
     let failure = req.flash('failure');
 
@@ -48,19 +62,19 @@ router.get('/adminPortal', function(req, res, next) {
 
 });
 
-router.get('/updateidcard', function(req, res, next){
+router.get('/updateidcard', isLoggedIn, function(req, res, next){
     let success = req.flash('success');
 
    res.render('updatePortal', {success});        
 })
 
-router.get('/registerStaff', function(req, res, next) {
+router.get('/registerStaff', isLoggedIn, function(req, res, next) {
     let success = req.flash('success');
   res.render('registerStaff', {success});
     
 });
 
-router.get('/generateStudent', function(req, res, next) {
+router.get('/generateStudent', isLoggedIn, function(req, res, next) {
  
   res.render('generateStudent');
 
@@ -69,7 +83,7 @@ router.get('/generateStudent', function(req, res, next) {
 
 
 
-router.get('/generateStaff', function(req, res, next) {
+router.get('/generateStaff', isLoggedIn, function(req, res, next) {
  
   res.render('generateStaff');
 
