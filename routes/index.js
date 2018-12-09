@@ -24,7 +24,7 @@ function  isLoggedIn(req, res,next){
 
 router.get('/logout', function(req, res, next){
   req.logout()
-  res.redirect('/login')
+  res.redirect('/')
 })
 
 /* GET home page. */
@@ -76,7 +76,21 @@ router.get('/registerStaff', isLoggedIn, function(req, res, next) {
 
 router.get('/generateStudent', isLoggedIn, function(req, res, next) {
  
-  res.render('generateStudent');
+  Admin.findOne({email: req.user.email}).then((result)=>{
+    if (result){
+        console.log(result)
+      Student.findOne({email: req.user.email}).then((result1)=>{
+        if(result1){
+              console.log(result1)
+      res.render('generateStudent', {result, result1});
+        } else{
+      res.send("Please go to the registrer student portal to register Students details ");
+        }
+      })
+    } else{
+      res.send("Please go to the Create card details to create card details")
+    }   
+  })
 
 });
 
@@ -84,8 +98,21 @@ router.get('/generateStudent', isLoggedIn, function(req, res, next) {
 
 
 router.get('/generateStaff', isLoggedIn, function(req, res, next) {
- 
-  res.render('generateStaff');
+  Admin.findOne({email: req.user.email}).then((result)=>{
+if(result){
+      console.log(result);
+       Staff.findOne({email: req.user.email}).then((result1)=>{
+         if(result1){
+ console.log(result1)
+      res.render('generateStaff', {result, result1});
+         }else{
+      res.send("Please go to the registrer staff portal to register Staffs details ")           
+         }
+      })
+} else{
+      res.send("Please go to the Create card details to create card details")  
+}    
+  })
 
 });
 
