@@ -21,6 +21,9 @@
 </head>
 
 <body>
+     <span style="display: none" id="success">
+        <%=success%>
+    </span>
     <div class="page-wrapper bg-dark p-t-100 p-b-50" style="background-color: #EBEEEF">
         <div class="wrapper wrapper--w900">
             <div class="card card-6">
@@ -83,6 +86,14 @@
 
     <!-- Main JS-->
     <script src="js/registration.js"></script>
+
+    
+    <script type="text/javascript">    
+        
+        if($.trim($('#success').text()).length !== 0) {
+           alert("<%=success%>")
+        }
+</script>
 
 </body><!-- This templates was made by Colorlib (https://colorlib.com) -->
 

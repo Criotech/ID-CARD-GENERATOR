@@ -14,25 +14,20 @@
     <link rel="stylesheet" href="/assets/tether/tether.min.css">
     <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap-grid.min.css">
-    <link rel="stylesheet" href="/bootstrap/css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap-reboot.min.css">
     <link rel="stylesheet" href="/assets/socicon/css/styles.css">
     <link rel="stylesheet" href="/assets/animatecss/animate.min.css">
     <link rel="stylesheet" href="/assets/datatables/data-tables.bootstrap4.min.css">
     <link rel="stylesheet" href="/assets/dropdown/css/style.css">
     <link rel="stylesheet" href="/assets/theme/css/style.css">
     <link rel="stylesheet" href="/assets/mobirise/css/mbr-additional.css" type="text/css">
-    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
-    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
-    <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="js/bootstrap-.min.js">
-    <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
-
     <link rel="stylesheet" href="/assets/user/style.css">
     <link rel="stylesheet" href="https:maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
-<link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/id-card-student1.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
+    
 </head>
 
 <body>
@@ -53,7 +48,7 @@
                         <div class="navbar-brand">
                             <span class="navbar-logo">
                                 <a href="https://www.lasu.edu.ng" target="_blank">
-                                    <img src="/assets/images/logo-114x123.png" alt="Mobirise" title="" style="height: 3.8rem;">
+                                    <img src="<%=result.passport%>" alt="Mobirise" title="" style="height: 3.8rem;">
                                 </a>
                             </span>
                             <span class="navbar-caption-wrap"><a  class="navbar-caption text-white display-7" href="https://mobirise.com"><p style="color:#EED343; font-family: 'Dancing Script', cursive; font-size:20px ">
@@ -127,7 +122,7 @@
   <section class="section-table yo cid-r7f77huOtX" id="cleared">
 
 
-        <div id="clear" style="display: block" >
+        <div id="clear" class="clear">
 
         <div class="container container-table">
             <div class="table-title pl-3 Ttitle">
@@ -153,18 +148,133 @@
                         <tr>
                             <th>NAME</th>
                             <th>Registration Number</th>
-                            
                             <th>Gender</th>
+                            <th>Generate Card</th>
                             
                         </tr>
                     </thead>
                     <tbody>
-                          <tr>
-                              <td>Bayo</td>
-                              <td>Sola</td>
-                              <td>Daniel</td>
-                          </tr>                        
+                          <% for(i=0; i<doc.length; i++){%>
+                                <tr>
+                                      <td><%=doc[i].studentName%></td>
+                                      <td><%=doc[i].reg%></td>
+                                      <td><%=doc[i].gender%></td>
+                              <td>
+                 <button type="button" data-toggle="modal" class="btn" style="background-color: #31B0D5; color: white" class="details"
+                                        data-target="#myModal<%=[i]%>">View Card</button>
+
+     
+
+                                         <!-- Modal -->
+        <!-- Trigger the modal with a button -->
+        <div id="myModal<%=[i]%>" class="modal fade" role="dialog" style="margin-top: 20px; padding-top: 150px;" >
+            
+            <div class="modal-dialog">
+        <div >
+                
+
+                <!-- Modal content-->
+                <div class="modal-content yoo">
+                    <div class="modal-header">
+                        <h4 class="modal-title">
+                           STUDENT ID CARD</h4>
+
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <div class="modal-body" style="z-index: 5; height: 500px">
+   
+    <div class="element id-card ref<%= i %>"> 
+        <div class="iimg5"><div class="over"></div>
+        <div class="cover-text">
+            <h3><%=result.schoolName%></h3>    
+        <div class="sch-logo" style="background-image: url(<%=result.passport%>)">
+        </div>
+    </div>
+        <div class="img-circle">
+                <div class="iimg2" style="background-image: url(<%=doc[i].passport%>)"></div>
+        </div>
+        </div>
+
+        
+        
+        <div class="mother">
+    <div class="cover-flex">
+            <h4 style="font-size: 10px;"><b>Student Name:</b></h4> 
+            <h4 style="font-size: 10px; padding-top: 3px"><b>Student No:</b></h4>
+            <h4 style="font-size: 10px; padding-top: 3px"><b>Class</b></h4> 
+            <h4 style="font-size: 10px; padding-top: 3px"><b>Gender:</b></h4>
+            
+        </div>
+               <div class="cover-flex2">
+                        <h4 style="font-size: 14px"><%=doc[i].studentName%></h4> 
+                        <h4 style="font-size: 14px; padding-top: 3px"><%=doc[i].reg%></h4> 
+                        <h4 style="font-size: 14px; padding-top: 3px"><%=doc[i].class%></h4>
+                        <h4 style="font-size: 14px; padding-top: 3px"><%=doc[i].gender%></h4> 
+                     
+                    </div>                        
+                                
+                            </div>
+                 
+     
+    
+        
+                    <div class="id-card elementt"> 
+                        <div class="iimg5"><div class="over"></div>
+                        <div class="cover-text1">
+                                <div class="sch-logo1" style="background-image: url('<%=result.passport%>')"></div>
+                    </div>
+                        </div>
+                
+                       
+                        
+                        <div class="mother">
+                    <div class="cover-flex1">
+                            <p>This certifies that the bearer is an student of this prestigious school.Please give him/her the
+                                necessary assistance to carry out the duties assigned to him/her. This card MUST be surrendered to the Director
+                                of Finance of this prestigious school when leaving the services of this school.  
+                            </p>
                             
+                           <span class="exp"><h3><b><p>VALIDITY:</p></b> <b style="color:white"><%=result.validity%></b></h3> 
+                            <h4>Signature: <p><b><img src="<%=result.sign%>" width="40px" height="40px" alt=""> </b> </p></h4> <div class="barcode" style="background-image: url('../images/barcode.png');"> </div></span>
+
+                        </div>
+                                </div>
+    
+                                            </div>
+                                 
+                            </div>
+ 
+    </div>
+                         <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                        <button class="save btn btn-primary">Download Front View</button>
+                        <button class="savee btn btn-primary">Download Back View</button>                        
+
+                    </div>
+                </div>
+                    </div>
+                   
+
+</div>            
+</div>
+</div>
+        
+
+     </div>
+
+    </div>
+     
+
+                              </td>
+        
+                                </tr>
+
+  
+              <% }%>
+                                             
+                           
+      
                     </tbody>
 
                 </table>
@@ -192,10 +302,8 @@
     </section>
      
 
- 
-
   <!-- Footer -->
-  <div class="py-3" >
+  <div class="py-3 clear" >
       <div class="container">
         <div class="row">
           <div class="col-md-12 text-center d-md-flex align-items-center">
@@ -211,11 +319,7 @@
     </div>
 
 
-
-
-
-
-    <script src="/assets/web/assets/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
     <script src="/assets/popper/popper.min.js"></script>
     <script src="/assets/tether/tether.min.js"></script>
     <script src="/assets/bootstrap/js/bootstrap.min.js"></script>
@@ -225,9 +329,53 @@
     <script src="/assets/datatables/jquery.data-tables.min.js"></script>
     <script src="/assets/datatables/data-tables.bootstrap4.min.js"></script>
     <script src="/assets/dropdown/js/script.min.js"></script>
-    <script src="/assets/theme/js/script.js"></script>
+    <script src="/assets/theme/js/script.js"></script>          
+    <script type="text/javascript" src="js/html2canvas.min.js"></script>
+    <script type="text/javascript" src="js/canvas2image.js"></script>
+    <script src="js/idcard-staff1.js"></script>
+     
+ <script>
+
+//  let elm = $('.element');
+let lebar = "324";
+let tingg1 = "204"; 
+let type = "png";   
+let filename = "htmltoimage";
 
   
+    $(".save").click(function() {
+        let elm = $(this).parents('.modal-content').find('.element')[0];
+        console.log(elm)
+        console.log($('.element').get(0));
+        html2canvas(elm).then(function(canvas){
+            let canWidth = canvas.width;
+            let canHeight = canvas.height;
+            let img = Canvas2Image.convertToImage(canvas, canWidth, canHeight);
+            $('#preview').after(img);
+            Canvas2Image.saveAsImage(canvas, lebar, tingg1, type, filename)
+        })
+    })
+
+
+
+  
+    $(".savee").click(function() {
+        let elm = $(this).parents('.modal-content').find('.elementt')[0];
+        console.log(elm)
+        console.log($('.elementt').get(0));
+        html2canvas(elm).then(function(canvas){
+            let canWidth = canvas.width;
+            let canHeight = canvas.height;
+            let img = Canvas2Image.convertToImage(canvas, canWidth, canHeight);
+            $('#preview').after(img);
+            Canvas2Image.saveAsImage(canvas, lebar, tingg1, type, filename)
+        })
+    })
+
+</script>           
+
+ 
+         
 
     <input name="animation" type="hidden">
 </body>

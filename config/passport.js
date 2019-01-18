@@ -39,7 +39,7 @@ passport.use('local.registerAdmin', new LocalStrategy({
             if (err){
                 return done(err)
             }
-            
+            req.flash('success', "Account created successfully")
             return done(null, newUser)
         })
     })

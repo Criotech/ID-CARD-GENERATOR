@@ -1,4 +1,5 @@
 
 exports.signup = function(req, res, next) {
-  res.render('signup');
+  let success = req.flash('success')
+  res.render('signup', {success});
 }

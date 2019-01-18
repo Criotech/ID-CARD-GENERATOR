@@ -24,16 +24,20 @@
     <span style="display: none" id="success">
         <%=success%>
     </span>
-    <div class="page-wrapper bg-dark p-t-100 p-b-50" style="background-color: #EBEEEF">
+        
+
+    <div id="form1"  class="page-wrapper  bg-dark p-t-100 p-b-50" style="background-color: #EBEEEF; ">
         <div class="wrapper wrapper--w900">
             <div class="card card-6">
                 <div class="card-heading">
                     <h2 class="title" style="color: black">Register Staff</h2>
                 </div>
                 <div class="card-body">
-                    <form action="/register/staff" method="POST" enctype="multipart/form-data">
+        
+        
+                    <form id="one" action="/register/staff" method="POST" enctype="multipart/form-data">
                              <div class="form-row">
-                            <div class="name">Passport</div>
+                            <div class="name">Upload Staff Passport</div>
                             <div class="value">
                                 <div class="input-group">
                                     <input class="input--style-6" type="file" name="passport">
@@ -49,10 +53,10 @@
                             </div>
                         </div>
                         <div class="form-row">
-                            <div class="name">Staff Id Number</div>
+                            <div class="name">Staff ID Number</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-6" type="text" name="reg" placeholder="Identification Number">
+                                    <input class="input--style-6" type="text" name="reg" placeholder="Staff Number">
                                 </div>
                             </div>
                         </div>
@@ -60,23 +64,34 @@
 
 
                         <div class="form-row">
-                            <div class="name">Position Held</div>
+                            <div class="name">Class</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-6" type="text" name="position" placeholder="Position Held">
-                                </div>
-                            </div>
-                        </div>
-                       
-                        <div class="form-row">
-                            <div class="name">Gender</div>
-                            <div class="value">
-                                <div class="input-group">
-                                    <input class="input--style-6" type="text" name="gender" placeholder="Gender">
+                                    <input class="input--style-6" type="text" name="class" placeholder="Class">
                                 </div>
                             </div>
                         </div>
 
+                        <div class="form-row">
+                            <div class="name">Position Held</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input class="input--style-6" type="text" name="position" placeholder="position">                                    
+                                </div>
+                            </div>
+                        </div>
+                   
+
+                         <div class="form-row">
+                            <div class="name">Gender</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input class="input--style-6" type="text" name="gender" placeholder="Gender">                                    
+                                </div>
+                            </div>
+                        </div>
+
+                        
                          <div class="form-row">
                         
                             <div class="value">
@@ -86,19 +101,22 @@
                             
                         </div>
 
-                   
+
                 
                 <div class="card-footer">
                     <button class="btn btn--radius-2 btn--blue-2" type="submit">Submit</button>
+                    
                 </div>
 
                 </form>
-
 
             </div>
         </div>
     </div>
     </div>
+
+            <button class="btn btn-primary"><a href="admindashboard">Back to dashboard</a>  </button>
+
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -118,7 +136,6 @@
            alert("<%=success%>")
         }
 
-
         </script>
 
 
@@ -134,3 +151,4 @@
 
 </html>
 <!-- end document-->
+

@@ -1,0 +1,262 @@
+
+.dream{
+    color: #ccae62;
+    font-size: 65px;
+    position: absolute;
+}
+
+
+.iimg5{ 
+  position: relative;
+  top:0;
+  bottom:0;
+height: 70px;
+margin-top: 10px;
+  width: 100%;
+  z-index:  -10;
+  margin-left: 0px;
+  background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+  border-color: white !important;  
+}
+
+.big-b{
+    display: inline-block;
+    background-color: #2ecc71;
+    width:200px;
+    height: 100px;
+    margin-top: 200px;
+    border-radius: 10px;
+    border:1px solid #2ecc71;
+}
+.big-b h3{
+    font-size:25px;
+    text-align: center;
+    color: white;
+}
+
+.big-b-mum{
+    text-align: center;
+}
+.iimg2{
+    background-image: url("../images/coporate2.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat; 
+height: 70px;
+  width: 100%;
+  border-color: white !important;  
+  border-radius: 50%;
+}
+
+.id-card h5{
+    margin-top: 10px;
+position: absolute;
+display: inline-block;
+color: white;
+font-size: 10px;
+}
+
+.id-card h1{
+    margin-top: 20px;
+    position: absolute;
+    display: inline-block;
+    color: white;
+    font-size: 20px;
+    }
+
+.over{
+    position:  absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    height: 100%;
+    width: 100%;
+    z-index: -5;
+    background-color: rgba(0,0,0,0.7);   
+}
+
+.sch-logo{
+    background-image: url("../images/schl-logo.JPEG");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat; 
+    position: absolute;
+    margin-top: 4px;
+    margin-left: 240px;
+  height: 30px;
+    width: 30px;
+    border-color: white !important;  
+    border-radius: 50%;
+}
+
+.sch-logo1{
+    background-image: url("../images/schl-logo.JPEG");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat; 
+    position: absolute;
+    margin-top: 4px;
+    margin-left: 10px;
+  height: 50px;
+    width: 50px;
+    border-color: white !important;  
+    border-radius: 50%;
+}
+
+.id-card{
+     display: inline-block;
+    width: 324px;
+    height: 204px;
+    background-color: #bdc3c7;
+    margin-top: 30px;
+    margin-left: 50px;
+    position: relative;
+    z-index: -15;
+    border-radius:10px;
+}
+
+.img-circle{
+    position: absolute;
+    background-color: #7f8c8d;
+    height: 70px;
+    width: 70px;
+    border-radius:50%;
+    z-index: -3;
+    margin-top: 45px;
+    margin-left: 15px;
+    border: 4px solid #bdc3c7;
+
+}
+
+.mum{
+    display: inline-block;
+    width: 324px;
+    height: 204px;
+    background-color: black;
+    margin-top: 30px;
+    margin-left: 50px;
+}
+
+.cover-text{
+    text-align: center;
+}
+
+.cover-text h3{
+    font-family: 'Playfair Display', serif;
+    position: absolute;
+    margin-left: 30px;
+    font-size: 11px;
+    color: white;
+    margin-top: 10px;
+}
+
+
+#center-card1{
+    text-align: center;
+    display: none;
+    margin-top: 100px;
+}
+
+#center-card2{
+    text-align: center;
+    display: none;
+}
+
+.cover-flex{
+flex-basis: 40%;
+margin-top: 50px;
+margin-left: 20px;
+}
+
+.cover-flex h4{
+    font-family: 'Playfair Display', serif;
+    font-size: 10px;
+    margin-top: 1px;
+    text-align: left;
+    line-height: 6px;
+}
+
+
+.mother{
+    display: flex;
+}
+
+.mother2{
+    display: flex;
+}
+
+.cover-flex2 h4{
+    font-family: 'Playfair Display', serif;
+    font-weight: bolder;
+    font-size: 11px;
+    margin-top: 1px;
+    text-align: left;
+    line-height: 6px;
+}
+
+.cover-flex2{
+    flex-basis: 45%;
+    margin-top: 50px;
+    margin-left: 20px;    
+}
+
+    .barcode{
+        background-image: url("../images/barcode.png");
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat; 
+        position: absolute;
+        top:0;
+        bottom:0;
+      height: 55px;
+      margin-top: 138px;
+        width: 17%;
+        margin-left: 240px;
+        border-color: white !important;  
+    }
+
+    .cover-text1{
+        text-align: left;
+        margin-left: 10px;
+    }
+
+    .cover-flex1 p{
+        font-family: 'Titillium Web', sans-serif;
+        font-size: 10px;
+        text-align: justify;
+        text-justify: inter-word;
+        line-height: 10px;
+    }
+
+    .cover-flex1{
+        border: 2px solid  #7f8c8d;
+        height: 123px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+
+    
+    .cover-flex1 h4{
+        font-size: 10px;
+        flex-basis: 30%;
+    }
+
+    .cover-flex1 h3{
+        font-size: 14px;
+        flex-basis: 30%;
+    }
+
+    .exp{
+        display: flex;
+    }
+
+    .exp h3{
+        margin-top: 15px;
+        font-family: 'Titillium Web', sans-serif;
+    }
+
+    .exp h4{
+        margin-top: 15px;
+        font-family: 'Titillium Web', sans-serif;
+    }
