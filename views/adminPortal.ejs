@@ -38,15 +38,16 @@
         
         
                     <form id="one" action="/register/admin" method="POST" enctype="multipart/form-data">
-                             <div class="form-row">
+                            <div class="form-row">
                             <div class="name">Upload School Logo</div>
                             <div class="value">
                                 <div class="input-group">
+                                    <label for="" style="color:orange"><h4>Note only Png and Jpeg images allowed</h4></label>
                                     <input class="input--style-6" type="file" name="passport">
                                 </div>
                             </div>
                         </div>
-        
+
 
                         <div class="form-row">
                             <div class="name">School Name</div>
@@ -62,7 +63,15 @@
                                 </div>
                             </div>
                         </div>
-                        
+
+                        <div class="form-row">
+                            <div class="name">School Motto</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input class="input--style-6" type="text" name="motto" placeholder="School Motto">
+                                </div>
+                            </div>
+                        </div>
 
 
                         <div class="form-row">
@@ -74,33 +83,40 @@
                             </div>
                         </div>
 
-                   
-                            
                         <div class="form-row">
-                            <div class="name">Upload Admin Signature</div>
+                            <div class="name">Select Id Card Color</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-6" type="file" name="sign" >
+                                    <input class="jscolor" value="ab2567" name="color">
+                                </div>
+                            </div>
+                        </div>
+                        
+
+                        <div class="form-row">
+                            <div class="name">Upload Principal Signature</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input class="input--style-6" type="file" name="sign">
                                 </div>
                             </div>
                         </div>
 
-                        
-                         <div class="form-row">
-                        
+
+                        <div class="form-row">
+
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-6" type="hidden" value="ADMIN" name="role" >
+                                    <input class="input--style-6" type="hidden" value="HEAD" name="role">
                                 </div>
-                            
-                        </div>
+
+                            </div>
 
 
-                
-                <div class="card-footer">
-                    <button class="btn btn--radius-2 btn--blue-2" type="submit">Submit</button>
-                </div>
 
+                            <div class="card-footer">
+                                <button class="btn btn--radius-2 btn--blue-2" type="submit">Submit</button>
+                            </div>
                 </form>
 
             </div>
@@ -145,6 +161,10 @@
 
     <!-- Main JS-->
     <script src="js/registration.js"></script>
+
+      <!-- jscolor -->
+        <script src="/js/jscolor.js"></script>
+
 
 </body><!-- This templates was made by Colorlib (https://colorlib.com) -->
 

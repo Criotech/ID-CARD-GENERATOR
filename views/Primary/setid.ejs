@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,26 +16,28 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
 
     <!-- Main CSS-->
-    <link href="css/registration.css" rel="stylesheet" media="all">
+    <link href="/css/registration.css" rel="stylesheet" media="all">
 </head>
 
 <body>
     <span style="display: none" id="success">
         <%=success%>
     </span>
+    <span style="display: none" id="failure">
+        <%=failure%>
+    </span>
 
-
-        <div id=form2 class="page-wrapper  bg-dark p-t-100 p-b-50" style="background-color: #EBEEEF;">
+    <div id="form1" class="page-wrapper  bg-dark p-t-100 p-b-50" style="background-color: #EBEEEF; ">
         <div class="wrapper wrapper--w900">
             <div class="card card-6">
                 <div class="card-heading">
-                    <h2 class="title" style="color: black">Update Id-Card Details</h2>
+                    <h2 class="title" style="color: black">Create Id-Card Details</h2>
                 </div>
                 <div class="card-body">
-        
 
-                      <form id="two" action="/register/admin/update?_method=PUT" method="POST" enctype="multipart/form-data">
-                               <div class="form-row">
+
+                    <form id="one" action="/postsetid" method="POST" enctype="multipart/form-data">
+                        <div class="form-row">
                             <div class="name">Upload School Logo</div>
                             <div class="value">
                                 <div class="input-group">
@@ -81,18 +82,18 @@
                             </div>
                         </div>
 
-                        <div class="form-row">
+                        <!-- <div class="form-row">
                             <div class="name">Select Id Card Color</div>
                             <div class="value">
                                 <div class="input-group">
                                     <input class="jscolor" value="ab2567" name="color">
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                         
 
                         <div class="form-row">
-                            <div class="name">Upload Principal's Signature</div>
+                            <div class="name">Upload Head Teacher Signature</div>
                             <div class="value">
                                 <div class="input-group">
                                     <input class="input--style-6" type="file" name="sign">
@@ -115,50 +116,56 @@
                             <div class="card-footer">
                                 <button class="btn btn--radius-2 btn--blue-2" type="submit">Submit</button>
                             </div>
-                </form>
 
+                    </form>
+
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-    </div>
-
-            <button class="btn btn-primary"><a href="admindashboard">Back to dashboard</a>  </button>
-
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-   <script src="plugins/jQuery/jquery-2.2.3.min.js"></script>
-<!-- Other js files -->
-<script src="plugins/jQuery/bootstrap.min.js"></script>
-
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<script src="plugins/jQuery/bootstrap.min.js"></script>
+        <button class="btn btn-primary"><a href="/primarydashboard/updateid">Click to update data</a>  </button>
+        <button class="btn btn-primary" style="float: right"><a href="/primarydashboard">Back to dashboard</a>  </button>
 
 
 
 
-    <script type="text/javascript">    
-        
-        if($.trim($('#success').text()).length !== 0) {
-           alert("<%=success%>")
-        }
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="plugins/jQuery/jquery-2.2.3.min.js"></script>
+        <!-- Other js files -->
+        <script src="plugins/jQuery/bootstrap.min.js"></script>
+
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+        <script src="plugins/jQuery/bootstrap.min.js"></script>
 
 
+
+
+        <script type="text/javascript">
+            if ($.trim($('#success').text()).length !== 0) {
+                alert("<%=success%>")
+            }
+
+            if ($.trim($('#failure').text()).length !== 0) {
+                alert("<%=failure%>")
+            }
         </script>
 
 
-</script>
-    <!-- Jquery JS-->
-    <script src="vendor/jquery/jquery.min.js"></script>
+        </script>
+        <!-- Jquery JS-->
+        <script src="/vendor/jquery/jquery.min.js"></script>
 
 
-    <!-- Main JS-->
-    <script src="js/registration.js"></script>
+        <!-- Main JS-->
+        <script src="/js/registration.js"></script>
 
-      <!-- jscolor -->
+        <!-- jscolor -->
         <script src="/js/jscolor.js"></script>
 
-
-</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</body>
+<!-- This templates was made by Colorlib (https://colorlib.com) -->
 
 </html>
 <!-- end document-->

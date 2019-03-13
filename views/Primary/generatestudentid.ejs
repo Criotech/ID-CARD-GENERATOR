@@ -79,7 +79,7 @@
                 itemscope="" data-pjax="#js-repo-pjax-container">
 
                 <span itemprop="itemListElement" itemtype="http://schema.org/ListItem" itemscope="">
-                    <a class="js-selected-navigation-item reponav-item " href="/admindashboard" data-hotkey="g i" data-selected-links="repo_issues repo_labels repo_milestones /Robogeek95/Baba-ijebu-main/issues"
+                    <a class="js-selected-navigation-item reponav-item " href="/primarydashboard" data-hotkey="g i" data-selected-links="repo_issues repo_labels repo_milestones /Robogeek95/Baba-ijebu-main/issues"
                         itemprop="url" >
 
                    <span itemprop="name">HOME</span>
@@ -191,7 +191,7 @@
 
                                                             <div class="modal-body" style="z-index: 5; height: 500px">
                                                                   <div class="element pid-card">
-                                                                      <div class="idhead">
+                                                                      <div class="idhead" style="background: #<%-result.color%>">
                                                                         <table style="margin-top: 12px;"  border="0">
                                                                             <tr >
                                                                                 <td rowspan="2" colspan="2"><center> <img src="<%=result.passport%>" height="47px" width="50px" alt=""> </center> </td>
@@ -202,7 +202,7 @@
                                                                     <div class="row" style="height: 216">
                                                                         <div class="col-lg-4">
                                                                             <center>
-                                                                                <div style="background: #3266CC; height: 100px; width: 110px; margin-top:10px; margin-left: 10px; margin-right: 10px">
+                                                                                <div style="background: #<%-result.color%>; height: 100px; width: 110px; margin-top:10px; margin-left: 10px; margin-right: 10px">
                                                                                     <center><img src="/images/timi.jpg" height="100px" width="80px" alt=""> </center>
                                                                                
                                                                                 </div>
@@ -214,11 +214,11 @@
                                                                         <div class="col-lg-8" style="padding-top: 5px">
                                                                             <table style="background: white">
                                                                                 <tr>
-                                                                                    <td style="font-family: 'Bitter', serif; font-weight: 900; font-size: 17px; color: #3266CC;"><center> <%=result.schoolName.toUpperCase()%></center></td>
+                                                                                    <td style="font-family: 'Bitter', serif; font-weight: 900; font-size: 17px; color: #<%-result.color%>;"><center> <%=result.schoolName.toUpperCase()%></center></td>
                                                                                 </tr>
                                                                                 <tr style="padding: 0; margin: 0">
                                                                                     <td>
-                                                                                        <div style="border: 1px solid black; border-radius: 10px; background-color: #3266CC; letter-spacing: 1px; font-size: 10px">
+                                                                                        <div style="border: 1px solid black; border-radius: 10px; background-color: #<%-result.color%>; letter-spacing: 1px; font-size: 10px">
                                                                                            <center> <b> Motto: "<%=result.motto%>" </b>  </center>                                                                                       
                                                                                         </div>
                                                                                     </td>
@@ -228,7 +228,7 @@
                                                                                        <center> <%=doc[i].studentName.toUpperCase()%> </center>
                                                                                     </td>
                                                                                     <tr>
-                                                                                        <td style="color: #3266CC">
+                                                                                        <td style="color: #<%-result.color%>">
                                                                                            <center> <%=doc[i].role.toUpperCase()%> </center>
                                                                                         </td>
                                                                                     </tr>
@@ -236,7 +236,7 @@
                                                                             </table>
                                                                         </div>                                                                               
                                                                     </div>  
-                                                                    <div class="foot" style="background-color: #3266CC; color: white; border-radius: 0 0 10px 10px; height: 20px">
+                                                                    <div class="foot" style="background-color: #<%-result.color%>; color: white; border-radius: 0 0 10px 10px; height: 20px">
                                                                         <div class="row">
                                                                             <div class="col-lg-4">
                                                                                 <center>ID CARD</center>

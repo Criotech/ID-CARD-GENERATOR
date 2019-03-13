@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Colorlib Templates">
+    <meta name="author" content="Colorlib">
+    <meta name="keywords" content="Colorlib Templates">
+
+    <!-- Title Page-->
+    <title>Register Student</title>
+
+    <!-- Font special for pages-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+
+    <!-- Main CSS-->
+    <link href="/css/registration.css" rel="stylesheet" media="all">
+</head>
+
+<body>
+    <span style="display: none" id="success">
+        <%=success%>
+    </span>
+
+
+    <div id="form1" class="page-wrapper  bg-dark p-t-100 p-b-50" style="background-color: #EBEEEF; ">
+        <div class="wrapper wrapper--w900">
+            <div class="card card-6">
+                <div class="card-heading">
+                    <h2 class="title" style="color: black">Register Student</h2>
+                </div>
+                <div class="card-body">
+
+
+                    <form id="one" action="/poststudentid" method="POST" enctype="multipart/form-data">
+                        <div class="form-row">
+                            <div class="name">Upload Student Passport</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input class="input--style-6" type="file" name="passport">
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="form-row">
+                            <div class="name">Student Name</div>
+                            <div class="value">
+                                <input class="input--style-6" type="text" name="studentName" placeholder="Student Name">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">School Registration Number</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input class="input--style-6" type="text" name="reg" placeholder="Student Number">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="name">Upload Student's Signature</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input class="input--style-6" type="file" name="sign">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+
+                            <div class="value">
+                                <div class="input-group">
+                                    <input class="input--style-6" type="hidden" value="STUDENT" name="role">
+                                </div>
+
+                            </div>
+
+
+
+                            <div class="card-footer">
+                                <button class="btn btn--radius-2 btn--blue-2" type="submit">Submit</button>
+                            </div>
+
+                    </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button class="btn btn-primary"><a href="/primarydashboard">Back to dashboard</a>  </button>
+
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="/plugins/jQuery/jquery-2.2.3.min.js"></script>
+        <!-- Other js files -->
+        <script src="plugins/jQuery/bootstrap.min.js"></script>
+
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+        <script src="/plugins/jQuery/bootstrap.min.js"></script>
+
+
+
+
+        <script type="text/javascript">
+            if ($.trim($('#success').text()).length !== 0) {
+                alert("<%=success%>")
+            }
+        </script>
+
+
+        </script>
+        <!-- Jquery JS-->
+        <script src="vendor/jquery/jquery.min.js"></script>
+
+
+        <!-- Main JS-->
+        <script src="/js/registration.js"></script>
+
+</body>
+<!-- This templates was made by Colorlib (https://colorlib.com) -->
+
+</html>
+<!-- end document-->

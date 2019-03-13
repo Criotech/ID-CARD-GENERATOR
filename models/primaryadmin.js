@@ -3,7 +3,7 @@ let mongoose = require("mongoose");
 let Schema = mongoose.Schema;
 
 
-let adminSchema = new Schema({
+let primaryadminSchema = new Schema({
     passport: {type: String},
     schoolName: {type: String},
     address: {type: String},
@@ -15,4 +15,4 @@ let adminSchema = new Schema({
     email:{type: String}
 })
 
-module.exports = mongoose.model("Admin", adminSchema)
+module.exports = mongoose.model("Primaryadmin", primaryadminSchema)

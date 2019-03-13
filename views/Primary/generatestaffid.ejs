@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
     <link rel="shortcut icon" href="assets/images/logo-114x123-2.png" type="image/x-icon">
     <meta name="description" content="Website Maker Description">
-    <title>Student Id Card</title>
+    <title>Staff Id Card</title>
 
     <link rel="stylesheet" href="/assets/web/assets/mobirise-icons/mobirise-icons.css">
     <link rel="stylesheet" href="/assets/tether/tether.min.css">
@@ -28,7 +28,6 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
         crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Bitter" rel="stylesheet">
 
 </head>
 
@@ -68,7 +67,7 @@
 
                 <h1 class="public">
 
-                    <span class="author" itemprop="author">Student</a></span>
+                    <span class="author" itemprop="author">Staff</a></span>
 
                     <strong itemprop="name">ID Card</strong>
                 </h1>
@@ -79,7 +78,7 @@
                 itemscope="" data-pjax="#js-repo-pjax-container">
 
                 <span itemprop="itemListElement" itemtype="http://schema.org/ListItem" itemscope="">
-                    <a class="js-selected-navigation-item reponav-item " href="/admindashboard" data-hotkey="g i" data-selected-links="repo_issues repo_labels repo_milestones /Robogeek95/Baba-ijebu-main/issues"
+                    <a class="js-selected-navigation-item reponav-item " href="/primarydashboard" data-hotkey="g i" data-selected-links="repo_issues repo_labels repo_milestones /Robogeek95/Baba-ijebu-main/issues"
                         itemprop="url" >
 
                    <span itemprop="name">HOME</span>
@@ -123,7 +122,6 @@
 
     </header>
 
-
     <section class="section-table yo cid-r7f77huOtX" id="cleared">
 
 
@@ -131,7 +129,7 @@
 
             <div class="container container-table">
                 <div class="table-title pl-3 Ttitle">
-                    <h1 class="h1">Generate Student Id Card</h1>
+                    <h1 class="h1">Generate Staff Id Card</h1>
                 </div>
 
                 <div class="table-wrapper">
@@ -152,7 +150,8 @@
                             <thead>
                                 <tr>
                                     <th>NAME</th>
-                                    <th>Registration Number</th>
+                                    <th>ID Number</th>
+                                    <th>Position Held</th>
                                     <th>Generate Card</th>
 
                                 </tr>
@@ -161,12 +160,14 @@
                                 <% for(i=0; i<doc.length; i++){%>
                                     <tr>
                                         <td>
-                                            <%=doc[i].studentName%>
+                                            <%=doc[i].staffName%>
                                         </td>
                                         <td>
                                             <%=doc[i].reg%>
                                         </td>
-                                       
+                                        <td>
+                                            <%=doc[i].position%>
+                                        </td>
                                         <td>
                                             <button type="button" data-toggle="modal" class="btn" style="background-color: #31B0D5; color: white" class="details" data-target="#myModal<%=[i]%>">View Card</button>
 
@@ -184,70 +185,53 @@
                                                         <div class="modal-content yoo">
                                                             <div class="modal-header">
                                                                 <h4 class="modal-title">
-                                                                    STUDENT ID CARD</h4>
+                                                                    STAFF ID CARD</h4>
 
                                                                 <button type="button" class="close" data-dismiss="modal">&times;</button>
                                                             </div>
 
                                                             <div class="modal-body" style="z-index: 5; height: 500px">
-                                                                  <div class="element pid-card">
-                                                                      <div class="idhead">
+
+                                                                <div class="element pid-card">
+                                                                    <div class="idhead">
                                                                         <table style="margin-top: 12px;"  border="0">
                                                                             <tr >
-                                                                                <td rowspan="2" colspan="2"><center> <img src="<%=result.passport%>" height="47px" width="50px" alt=""> </center> </td>
+                                                                                <td rowspan="2" colspan="2"> <img src="<%=result.passport%>" height="40px" width="40px" alt=""></td>
+                                                                                <td><b><%=result.schoolName%></b></td>
+                                                                            </tr>
+                                                                            <tr style="height:5px;">
+                                                                                <td style="font-size: 10px; padding:5px; margin:5px;"> <%=result.address%></td>
+                                                                            </tr>                   
+                                                                        </table>
+                                                                    </div>
+                                                                    <div class="idbody">
+                                                                        <div class="status" style="background: #3266CC; color: white; width: 100px"><span style="padding-left: 50px;" >STAFF</span></div>
+                                                                             <table style="margin-top: 12px;"  border="0">
+                                                                            <tr style="height:3px;">
+                                                                                <td style="font-size: 11px; padding:3px; font-family: arial Black; margin:5px; width: 220px; text-align: right; padding-right: 30px">  <span style="font-size: 8px;">Name</span> <br> <b>SIYANBOLA OPEOLUWA PHILIP</b> </td>                                                                                                                                                                                                                                               
+                                                                                <td rowspan="5" colspan="2" style="padding-top: 10px; background-color: white"><center><img src="<%=doc[i].passport%>" height="100px" width="80px" alt="">
+                                                                                <br> <img src="<%=doc[i].sign%>" height="33px" width="80px" alt="">
+                                                                                </center> </td>                                                                                
+                                                                            </tr>
+                                                                            <tr style="height:3px;">
+                                                                                <td style="font-size: 11px; padding:3px;  font-family: arial Black; margin:5px; text-align: right; padding-right: 30px"><span style="font-size: 8px;">Id-Number</span> <br> <b><%=doc[i].reg%></b></td>
+                                                                            </tr>
+                                                                                <tr style="height:3px;">
+                                                                                <td style="font-size: 11px; font-family: arial Black; padding:3px; margin:5px; text-align: right; padding-right: 30px"><span style="font-size: 8px;">Position Held</span> <br> <b> <%=doc[i].position%> </b></td>
+                                                                            </tr>
+                                                                            <tr style="height:3px;">
+                                                                                <td style="font-size: 11px; font-family: arial Black ;padding:3px; margin:5px; text-align: right; padding-right: 30px"><span style="font-size: 8px;">Gender</span> <br> <b><%=doc[i].gender%></b></td>
                                                                             </tr>
                                                                                               
                                                                         </table>
                                                                     </div>
-                                                                    <div class="row" style="height: 216">
-                                                                        <div class="col-lg-4">
-                                                                            <center>
-                                                                                <div style="background: #3266CC; height: 100px; width: 110px; margin-top:10px; margin-left: 10px; margin-right: 10px">
-                                                                                    <center><img src="/images/timi.jpg" height="100px" width="80px" alt=""> </center>
-                                                                               
-                                                                                </div>
-                                                                            </center>
-                                                                           <div style="font-size: 10px; margin: 0; padding: 0; text-align: center">
-                                                                               <center><img src="<%=doc[i].sign%>" height="30px" width="90px" alt=""></center> Holder's Signature
-                                                                           </div>
-                                                                        </div> 
-                                                                        <div class="col-lg-8" style="padding-top: 5px">
-                                                                            <table style="background: white">
-                                                                                <tr>
-                                                                                    <td style="font-family: 'Bitter', serif; font-weight: 900; font-size: 17px; color: #3266CC;"><center> <%=result.schoolName.toUpperCase()%></center></td>
-                                                                                </tr>
-                                                                                <tr style="padding: 0; margin: 0">
-                                                                                    <td>
-                                                                                        <div style="border: 1px solid black; border-radius: 10px; background-color: #3266CC; letter-spacing: 1px; font-size: 10px">
-                                                                                           <center> <b> Motto: "<%=result.motto%>" </b>  </center>                                                                                       
-                                                                                        </div>
-                                                                                    </td>
-                                                                                </tr>
-                                                                                <tr>
-                                                                                    <td style="font-family: 'Bitter',  serif; font-weight: 700; color: black; font-size: 15px; padding: 0; padding-top:10px; margin: 0">
-                                                                                       <center> <%=doc[i].studentName.toUpperCase()%> </center>
-                                                                                    </td>
-                                                                                    <tr>
-                                                                                        <td style="color: #3266CC">
-                                                                                           <center> <%=doc[i].role.toUpperCase()%> </center>
-                                                                                        </td>
-                                                                                    </tr>
-                                                                                </tr>
-                                                                            </table>
-                                                                        </div>                                                                               
-                                                                    </div>  
-                                                                    <div class="foot" style="background-color: #3266CC; color: white; border-radius: 0 0 10px 10px; height: 20px">
-                                                                        <div class="row">
-                                                                            <div class="col-lg-4">
-                                                                                <center>ID CARD</center>
-                                                                            </div>
-                                                                            <div class="col-lg-8">
-                                                                                <center>ADMIN NO: <%=doc[i].reg%></center>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>                                                
+                                                                    <div class="idfoot">
+                                                                        
+                                                                    </div>
+                                                                    
                                                                 </div>
-                                                                <div class="element2 pid-card">
+                                                               
+                                                                   <div class="element2 pid-card">
                                                                     <div class="idhead2">
                                                                         h
                                                                     </div>
@@ -306,46 +290,41 @@
 
                                                 </div>
                                             </div>
+
+
+
+                                        </td>
+
+                                    </tr>
+
+
+                                    <% }%>
+
+
+
+                            </tbody>
+
+                        </table>
+
                     </div>
 
-
-                </div>
-
-            </div>
-
-
-            </td>
-
-            </tr>
-
-
-            <% }%>
-
-
-
-                </tbody>
-
-                </table>
-
-        </div>
-
-        <div class="container table-info-container">
-            <div class="row info">
-                <div class="col-md-6">
-                    <div class="dataTables_info mbr-fonts-style display-7">
-                        <span class="infoBefore">Showing</span>
-                        <span class="inactive infoRows"></span>
-                        <span class="infoAfter">entries</span>
-                        <span class="infoFilteredBefore">(filtered from</span>
-                        <span class="inactive infoRows"></span>
-                        <span class="infoFilteredAfter"> total entries)</span>
+                    <div class="container table-info-container">
+                        <div class="row info">
+                            <div class="col-md-6">
+                                <div class="dataTables_info mbr-fonts-style display-7">
+                                    <span class="infoBefore">Showing</span>
+                                    <span class="inactive infoRows"></span>
+                                    <span class="infoAfter">entries</span>
+                                    <span class="infoFilteredBefore">(filtered from</span>
+                                    <span class="inactive infoRows"></span>
+                                    <span class="infoFilteredAfter"> total entries)</span>
+                                </div>
+                            </div>
+                            <div class="col-md-6"></div>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-6"></div>
             </div>
-        </div>
-        </div>
-        </div>
         </div>
     </section>
 
@@ -382,7 +361,7 @@
     <script type="text/javascript" src="/js/canvas2image.js"></script>
     <script src="/js/idcard-staff1.js"></script>
 
-    <script>
+        <script>
 
 //  let elm = $('.element');
 let lebar = "324";
@@ -421,7 +400,6 @@ let filename = "htmltoimage";
     })
 
 </script>           
-
 
 
     <input name="animation" type="hidden">

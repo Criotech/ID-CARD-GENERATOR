@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,13 +10,13 @@
     <meta name="keywords" content="Colorlib Templates">
 
     <!-- Title Page-->
-    <title>Admin Portal</title>
+    <title>Register Staff</title>
 
     <!-- Font special for pages-->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
 
     <!-- Main CSS-->
-    <link href="css/registration.css" rel="stylesheet" media="all">
+    <link href="/css/registration.css" rel="stylesheet" media="all">
 </head>
 
 <body>
@@ -26,21 +25,20 @@
     </span>
 
 
-        <div id=form2 class="page-wrapper  bg-dark p-t-100 p-b-50" style="background-color: #EBEEEF;">
+    <div id="form1" class="page-wrapper  bg-dark p-t-100 p-b-50" style="background-color: #EBEEEF; ">
         <div class="wrapper wrapper--w900">
             <div class="card card-6">
                 <div class="card-heading">
-                    <h2 class="title" style="color: black">Update Id-Card Details</h2>
+                    <h2 class="title" style="color: black">Register Staff</h2>
                 </div>
                 <div class="card-body">
-        
 
-                      <form id="two" action="/register/admin/update?_method=PUT" method="POST" enctype="multipart/form-data">
-                               <div class="form-row">
-                            <div class="name">Upload School Logo</div>
+
+                    <form id="one" action="/poststaffid" method="POST" enctype="multipart/form-data">
+                        <div class="form-row">
+                            <div class="name">Upload Staff Passport</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <label for="" style="color:orange"><h4>Note only Png and Jpeg images allowed</h4></label>
                                     <input class="input--style-6" type="file" name="passport">
                                 </div>
                             </div>
@@ -48,51 +46,52 @@
 
 
                         <div class="form-row">
-                            <div class="name">School Name</div>
+                            <div class="name">Staff Name</div>
                             <div class="value">
-                                <input class="input--style-6" type="text" name="schoolName" placeholder="School Name">
+                                <input class="input--style-6" type="text" name="staffName" placeholder="Staff Name">
                             </div>
                         </div>
                         <div class="form-row">
-                            <div class="name">School Address</div>
+                            <div class="name">Staff ID Number</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-6" type="text" name="address" placeholder="School Address">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="form-row">
-                            <div class="name">School Motto</div>
-                            <div class="value">
-                                <div class="input-group">
-                                    <input class="input--style-6" type="text" name="motto" placeholder="School Motto">
+                                    <input class="input--style-6" type="text" name="reg" placeholder="Staff Number">
                                 </div>
                             </div>
                         </div>
 
 
+
                         <div class="form-row">
-                            <div class="name">Id Card Validity</div>
+                            <div class="name">Class</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-6" type="text" name="validity" placeholder="Validity">
+                                    <input class="input--style-6" type="text" name="class" placeholder="Class">
                                 </div>
                             </div>
                         </div>
 
                         <div class="form-row">
-                            <div class="name">Select Id Card Color</div>
+                            <div class="name">Position Held</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="jscolor" value="ab2567" name="color">
+                                    <input class="input--style-6" type="text" name="position" placeholder="position">
                                 </div>
                             </div>
                         </div>
-                        
+
 
                         <div class="form-row">
-                            <div class="name">Upload Principal's Signature</div>
+                            <div class="name">Gender</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input class="input--style-6" type="text" name="gender" placeholder="Gender">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="name">Upload Staff Signature</div>
                             <div class="value">
                                 <div class="input-group">
                                     <input class="input--style-6" type="file" name="sign">
@@ -105,7 +104,7 @@
 
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-6" type="hidden" value="HEAD" name="role">
+                                    <input class="input--style-6" type="hidden" value="STAFF" name="role">
                                 </div>
 
                             </div>
@@ -114,51 +113,49 @@
 
                             <div class="card-footer">
                                 <button class="btn btn--radius-2 btn--blue-2" type="submit">Submit</button>
-                            </div>
-                </form>
 
+                            </div>
+
+                    </form>
+
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-    </div>
 
-            <button class="btn btn-primary"><a href="admindashboard">Back to dashboard</a>  </button>
-
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-   <script src="plugins/jQuery/jquery-2.2.3.min.js"></script>
-<!-- Other js files -->
-<script src="plugins/jQuery/bootstrap.min.js"></script>
-
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<script src="plugins/jQuery/bootstrap.min.js"></script>
+        <button class="btn btn-primary"><a href="/primarydashboard">Back to dashboard</a>  </button>
 
 
 
+        <script src="/https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="/plugins/jQuery/jquery-2.2.3.min.js"></script>
+        <!-- Other js files -->
+        <script src="/plugins/jQuery/bootstrap.min.js"></script>
 
-    <script type="text/javascript">    
-        
-        if($.trim($('#success').text()).length !== 0) {
-           alert("<%=success%>")
-        }
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+        <script src="/plugins/jQuery/bootstrap.min.js"></script>
 
 
+
+
+        <script type="text/javascript">
+            if ($.trim($('#success').text()).length !== 0) {
+                alert("<%=success%>")
+            }
         </script>
 
 
-</script>
-    <!-- Jquery JS-->
-    <script src="vendor/jquery/jquery.min.js"></script>
+        </script>
+        <!-- Jquery JS-->
+        <script src="/vendor/jquery/jquery.min.js"></script>
 
 
-    <!-- Main JS-->
-    <script src="js/registration.js"></script>
+        <!-- Main JS-->
+        <script src="/js/registration.js"></script>
 
-      <!-- jscolor -->
-        <script src="/js/jscolor.js"></script>
-
-
-</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</body>
+<!-- This templates was made by Colorlib (https://colorlib.com) -->
 
 </html>
 <!-- end document-->

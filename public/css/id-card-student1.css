@@ -97,6 +97,43 @@
       z-index: 10;
       border-radius:10px;
   }
+
+   .pid-card{
+        display: inline-block;
+      width: 370px;
+      height: 236px;
+      background-color: white;
+      margin-top: 5px;
+      margin-left: 50px;
+      position: relative;
+      z-index: 10;
+      border: 1px solid black;
+      border-radius:10px;
+  }
+
+  .idhead{
+     background: #3266CC;
+      height: 55px; 
+      border-radius:10px 10px 0 0;
+  }
+
+  .idbody{
+    height: 160px;
+    z-index: -1;
+  }
+
+  .idfoot{
+      height: 20px;
+      border-radius: 0 0 10px 10px;
+      background: #3266CC;
+      
+  }
+
+  .idhead2{
+      height: 15px;
+      background: black;
+      border-radius:10px 10px 0 0;
+  }
   
   .img-circle{
       position: absolute;
